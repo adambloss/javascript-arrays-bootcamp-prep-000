@@ -4,9 +4,29 @@ function addElementToBeginningOfArray(array, element) {
     return arr
 }
 function destructivelyAddElementToBeginningOfArray(array, element) {
-  var arr = array.unshift(element);
-  return arr
+  array.unshift(element);
+  return array
 }
 function addElementToEndOfArray(array, element) {
-
+  var arr = [...array, element]
+  return arr
+}
+function destructivelyAddElementToEndOfArray(array, element) {
+  array.push(element);
+  return array
+}
+function accessElementInArray(array, index) {
+  return array[index]
+}
+function destructivelyRemoveElementFromBeginningOfArray(array) {
+  return array.shift();
+}
+function removeElementFromBeginningOfArray(array) {
+  return array.slice(1, array.length);
+}
+function destructivelyRemoveElementFromEndOfArray(array) {
+  return array.pop();
+}
+function removeElementFromEndOfArray(array) {
+  return array.slice(0, -1)
 }
